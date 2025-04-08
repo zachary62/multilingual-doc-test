@@ -1,0 +1,44 @@
+title: "Multilingual Documentation"
+description: "A minimal example of multilingual just-the-docs"
+baseurl: ""
+url: ""
+
+# Theme settings
+theme: just-the-docs
+color_scheme: light
+
+# Set default language
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: "en"
+
+# Collections for each language
+collections:
+  en:
+    output: true
+    permalink: /:collection/:path/
+  fr: 
+    output: true
+    permalink: /:collection/:path/
+  es:
+    output: true
+    permalink: /:collection/:path/
+
+# Language names for UI
+languages:
+  en: English
+  fr: Français
+  es: Español
+
+# Just the Docs config
+just_the_docs:
+  collections:
+    en:
+      name: English
+    fr:
+      name: Français
+    es:
+      name: Español 
