@@ -4,6 +4,7 @@ title: Inicio
 nav_order: 1
 lang: es
 permalink: /es/
+collection: es
 ---
 
 # Bienvenido a Nuestra Documentación

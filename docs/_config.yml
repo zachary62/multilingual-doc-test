@@ -1,11 +1,23 @@
 title: "Multilingual Documentation"
 description: "A minimal example of multilingual just-the-docs"
-baseurl: ""
-url: ""
+baseurl: "/multilingual-doc-test"
+url: "https://zachary62.github.io"
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs
 color_scheme: light
+
+# Enable plugins
+plugins:
+  - jekyll-remote-theme
+
+# Enable search
+search_enabled: true
+
+# Default aux links
+aux_links:
+  "Source on GitHub":
+    - "//github.com/zachary62/multilingual-doc-test"
 
 # Set default language
 defaults:
@@ -14,6 +26,21 @@ defaults:
       path: ""
     values:
       lang: "en"
+  -
+    scope:
+      path: "en/**"
+    values:
+      lang: "en"
+  -
+    scope:
+      path: "fr/**"
+    values:
+      lang: "fr"
+  -
+    scope:
+      path: "es/**"
+    values:
+      lang: "es"
 
 # Collections for each language
 collections:
