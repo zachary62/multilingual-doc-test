@@ -51,10 +51,10 @@ languages:
   en: English
   zh: 中文
 
-# Just the Docs config
-just_the_docs:
-  collections:
-    en:
-      name: English
-    zh:
-      name: 中文 
+# Just the Docs config (REMOVED)
+# just_the_docs:
+#   collections:
+#     en:
+#       name: English
+#     zh:
+#       name: 中文 
