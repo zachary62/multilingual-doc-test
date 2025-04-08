@@ -1,0 +1,51 @@
+/* Custom styles */
+
+.lang-selector {
+  display: inline-block; /* Align with aux links */
+  margin-left: 1rem; /* Add some spacing */
+  font-size: 0.875em; /* Match aux link font size */
+
+  span {
+    margin-right: 0.5em; /* Space between "Language:" and links */
+    color: var(--link-color); /* Use theme's link color */
+  }
+
+  ul {
+    display: inline; /* Keep items on the same line */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline;
+    margin-left: 0.25em; /* Space between language links/separator */
+
+    &:not(:last-child)::after {
+      content: "|"; /* Separator */
+      margin-left: 0.5em;
+      color: var(--link-color); /* Use theme's link color */
+      opacity: 0.7;
+    }
+
+    a {
+      color: var(--link-color); /* Use theme's link color */
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    strong {
+        font-weight: normal; /* Don't bold the current language */
+        color: var(--text-color); /* Use default text color for current */
+        cursor: default;
+    }
+  }
+}
+
+/* Ensure it aligns well in the header */
+.site-header .lang-selector {
+  vertical-align: middle; /* Align vertically with other header items */
+} 

@@ -51,6 +51,10 @@ languages:
   en: English
   zh: 中文
 
+# Tell Just the Docs about custom CSS
+just_the_docs:
+  custom_css: /assets/css/custom.scss
+
 # Just the Docs config (REMOVED)
 # just_the_docs:
 #   collections:
