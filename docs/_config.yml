@@ -54,6 +54,13 @@ languages:
 # Tell Just the Docs about custom CSS
 just_the_docs:
   custom_css: /assets/css/custom.scss
+  collections:
+    en:
+      name: English
+      nav_exclude_language: zh
+    zh:
+      name: 中文
+      nav_exclude_language: en
 
 # Just the Docs config (REMOVED)
 # just_the_docs:

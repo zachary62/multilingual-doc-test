@@ -48,4 +48,28 @@
 /* Ensure it aligns well in the header */
 .site-header .lang-selector {
   vertical-align: middle; /* Align vertically with other header items */
+}
+
+/* Style for top language selector to match "Source on GitHub" link */
+.top-lang-selector {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 0.875em;
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .active-lang {
+    color: var(--text-color);
+  }
+  
+  /* Line up with aux-nav */
+  margin-right: 1rem;
+  vertical-align: middle;
 } 
