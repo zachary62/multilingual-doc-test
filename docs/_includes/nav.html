@@ -1,0 +1,26 @@
+{% comment %}
+  Custom navigation that filters pages based on the current page's collection (language).
+{% endcomment %}
+
+{% assign current_collection_name = page.collection %}
+
+{% if current_collection_name %}
+  {% comment %} Get pages from the current collection, filter out excludes, ensure they have nav_order, and sort %}
+  {% assign collection_pages = site[current_collection_name]
+                              | where_exp: "item", "item.nav_exclude != true"
+                              | where_exp: "item", "item.nav_order"
+                              | sort: "nav_order" %}
+
+  <ul class="nav-list">
+    {% for node in collection_pages %}
+      {% if node.title and node.nav_order %}
+        <li class="nav-list-item{% if page.url == node.url %} active{% endif %}">
+          <a href="{{ node.url | absolute_url }}" class="nav-list-link">{{ node.title }}</a>
+          {% comment %} Add logic for nested pages if needed in the future %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="text-grey-lt-300"><em>Navigation error: Current page does not belong to a language collection (en/zh).</em></p>
+{% endif %} 
