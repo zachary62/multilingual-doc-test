@@ -7,10 +7,19 @@ layout: none
   <head>
     <meta charset="utf-8">
     <title>Redirecting to English documentation</title>
-    <meta http-equiv="refresh" content="0; URL=/multilingual-doc-test/en/">
-    <link rel="canonical" href="/multilingual-doc-test/en/">
+    <script>
+      // Get the current URL
+      var currentURL = window.location.href;
+      // Extract the base URL (domain and path up to the current directory)
+      var baseURL = currentURL.split('/').slice(0, -1).join('/');
+      // Construct the target URL
+      var targetURL = baseURL + '/en/';
+      // Redirect
+      window.location.href = targetURL;
+    </script>
+    <meta http-equiv="refresh" content="0; URL=en/">
   </head>
   <body>
-    <p>Redirecting to <a href="/multilingual-doc-test/en/">English documentation</a>...</p>
+    <p>Redirecting to <a href="en/">English documentation</a>...</p>
   </body>
 </html> 

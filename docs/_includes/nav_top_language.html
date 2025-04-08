@@ -1,0 +1,17 @@
+<div class="top-lang-selector">
+  {% for lang in site.languages %}
+    {% assign lang_code = lang[0] %}
+    {% assign lang_name = lang[1] %}
+    {% if lang_code == page.lang %}
+      <span class="active-lang">{{ lang_name }}</span>
+    {% else %}
+      {% assign page_name = page.name | split: '.' | first %}
+      {% if page.name contains 'index' %}
+        <a href="{{ site.baseurl }}/{{ lang_code }}/">{{ lang_name }}</a>
+      {% else %}
+        <a href="{{ site.baseurl }}/{{ lang_code }}/{{ page_name }}/">{{ lang_name }}</a>
+      {% endif %}
+    {% endif %}
+    {% unless forloop.last %} | {% endunless %}
+  {% endfor %}
+</div> 
